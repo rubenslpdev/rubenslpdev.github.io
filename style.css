@@ -81,6 +81,7 @@ header {
 @media (max-width: 840px) {
 
   
+/*===== Início do Media Menu =====*/
     #social {
         display: none;
     }
@@ -111,10 +112,11 @@ header {
         display: flex;
         padding: .5rem 1rem;
         font-size: 1rem;
+        font-family: 'Raleway', sans-serif;
         border: none;
         background: none;
         cursor: pointer;
-        color: #bbaa5c;
+        color: #252420;
         gap: .5rem;
     }
     #hamburger {
@@ -144,3 +146,4 @@ header {
         top: -7px;
     }
 }
+/*===== Fim do Media Menu =====*/
