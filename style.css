@@ -1,6 +1,5 @@
 *, *:before, *:after {
    box-sizing: inherit;
-
   }
 
 html {
@@ -65,11 +64,11 @@ header {
     color: #bbaa5c;
 }
 
-#social {
+.social {
     display: flex;
 }
 
-#social img {
+.social img {
     width: 22px;
     margin-left: 10px;
 }
@@ -87,9 +86,7 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     
-}
-
-#home-intro::before {
+    &::before {
     content: "";
     background: rgba(0, 0, 0, 0.3); /* Black overlay with opacity */
     position: absolute;
@@ -97,6 +94,7 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
+}
 }
 
 /*===== Home mouse wheel =====*/
@@ -305,7 +303,8 @@ header {
   align-items: center;
 }
 
-#home-portfolio-container1, #home-shows-container2 {
+#home-portfolio-container1, 
+#home-shows-container2 {
   width: 50%;
   min-width: 350px; 
   padding: 0 30px;
@@ -314,21 +313,24 @@ header {
   vertical-align: middle;
 }
 
-#home-portfolio-container1 p, #home-shows-container2 p {
+#home-portfolio-container1 p, 
+#home-shows-container2 p {
   text-align: justify;
   text-justify: inter-word;
   max-width: 500px;
   margin: 30px auto;
 }
 
-#home-portfolio-container1 h1, #home-shows-container2 h1, button {
+#home-portfolio-container1 h1, 
+#home-shows-container2 h1, 
+button {
   margin: 50px 0;
 }
 
-#home-portfolio-container2, #home-shows-container1 {
+#home-portfolio-container2, 
+#home-shows-container1 {
   width: 50%;
-  height: 100%;
-  
+  height: 100%;  
 }
 
 #home-clients-container1 {
@@ -338,18 +340,76 @@ header {
   font-family: 'Cormorant Garamond', serif;
   font-weight: normal;
   font-size: 2rem;
-  text-align: center;
-  
+  text-align: center;  
 }
 
-#home-clients-container2 {
-  width: 100vw;
-  height: 18rem;
+/*======= Slider dos logotipos ======*/
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logos {
+  overflow: hidden;
+  padding: 60px 0;
+  background: white;
+  white-space: nowrap;
+  position: relative;
+}
+
+.logos:before,
+.logos:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.logos:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+}
+
+.logos:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+}
+
+.logos:hover .logos-slide {
+  animation-play-state: paused;
+}
+
+.logos-slide {
+  display: inline-block;
+  animation: 35s slide infinite linear;
+}
+
+.logos-slide img {
+  height: 80px;
+  margin: 0 40px;
+}
+/*======= Fim Slider dos logotipos ======*/
+
+#home-parallax2 {
+  background-image: url(imgs/home/home-parallax2.svg);
+  min-height: 800px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 45em;
+  background-color: #252420;
 }
 
 #home-shows {
   width: 100vw;
-  height: 700px;
+  height: 800px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -357,12 +417,172 @@ header {
 }
 
 
-#home-portfolio-container2 img, #home-shows-container1 img {
+#home-portfolio-container2 img, 
+#home-shows-container1 img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
+#home-contact {
+  width: 100vw;
+  height: 800px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #FBC36D;
+}
+
+#home-contact-container1 {
+  width: 50%;
+  height: 100%;  
+}
+
+#home-contact-container2 {
+  width: 50%;
+  text-align: center;
+}
+
+form {
+  width: 60vw;
+  max-width: 500px;
+  min-width: 250px;
+  margin: 0 auto;
+  padding-bottom: 2em;
+}
+
+fieldset {
+  border: none;
+}
+
+input,
+textarea,
+select {
+  margin: 0 0 10px 0;
+  width: 100%;
+  min-height: 2em;
+  padding: 0 10px;
+}
+
+input,
+textarea {
+  background-color: #fff;
+  border: 1px solid #fff;
+  color: #252420;
+}
+
+.submit {
+  transition: all 0.2s ease, visibility 0s;
+  border-radius: 0;
+  background-color: #252420;
+  border: 0;
+  color: #bbaa5c;
+  min-height: 3em;
+  cursor: pointer;
+}
+
+.submit:hover {
+  color: #fff;
+  background: rgba(37,35,32,0.9);
+}
+
+#home-contact-container1 img {
+  width: 100%;
+  height: 100%;
+  max-width: fit-content;
+  object-fit: cover;
+  margin: auto;
+  display: block;
+}
+
+#home-contact-container2 h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: normal;
+  font-size: 4rem;
+  color: #F47B62;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+#home-contact-container2 a {
+  font-size: .9rem;
+  color: #252420;
+}
+
+#home-contact-container2 a:hover {
+  font-size: .9rem;
+  color: #fff;
+}
+
+footer {
+  width: 100vw;
+  height: 540px;
+  background-color: #252420;
+  text-align: center;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  padding: 2rem 0;  
+  color: #bbaa5c;
+  font-size: .7rem;
+}
+
+.footer-logo {
+  width: 150px;
+  height: auto;
+  margin-bottom: 6rem;
+}
+
+.contact-footer {
+  margin: 3rem 0;
+
+}
+
+.contact-footer a {
+  font-size: .9rem;
+  color: #E4DFD5;
+}
+
+.privacy-footer a {
+
+  color: #E4DFD5;
+} 
+
+.contact-footer a:hover, .privacy-footer a:hover {
+  color: #bbaa5c;
+}
+
+.social-footer {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ margin: auto;
+}
+
+.social-footer img {
+  margin-left: 10px;
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.left {
+  float: left;
+  width: 48%
+}
+
+.right {
+  float: right;
+  width: 50%;
+}
 
 h1 {
   font-family: 'Cormorant Garamond', serif;
@@ -382,6 +602,15 @@ hr {
   padding: 0;
 }
 
+.hr-red {
+  display: block;
+  width: 20px;
+  border: 0;
+  border-top: 3px solid #F47B62;
+  margin: 2rem auto;
+  text-align: center;
+}
+
 .vertical-line {
   display: block;
   width: 1px;
@@ -390,7 +619,16 @@ hr {
   border-right: 2px solid #BEA960;
   margin:auto;
   text-align: center;
+}
 
+.vertical-line-red {
+  display: block;
+  width: 1px;
+  height: 120px;
+  border: 0;
+  border-right: 2px solid #F47B62;
+  margin:auto;
+  text-align: center;
 }
 
 button {
@@ -418,9 +656,10 @@ button:hover {
 
 @media (max-width: 992px) {
 /*===== Menu =====*/
-    #social {
+    .social {
         display: none;
     }
+
     #menu{
        display: block;
        position: absolute;
@@ -434,16 +673,19 @@ button:hover {
        overflow-y: hidden;
        z-index: 1000;
     }
+
     #nav.active #menu{
         height: calc(100vh - 65px);
         visibility: visible;
         overflow-y: auto;
     }
+
     #menu a {
         padding: 1rem 0;
         margin: 0 1rem;
         border-bottom: 2px solid #bbaa5c;
     }
+
     #btn-mobile {
         display: flex;
         padding: .5rem 1rem;
@@ -455,12 +697,14 @@ button:hover {
         color: #252420;
         gap: .5rem;
     }
+
     #hamburger {
         width: 20px;
         height: 2px;
         border-top: 2px solid;
         color: #bbaa5c;
     }
+
     #hamburger::after, #hamburger::before {
         content: '';
         display: block;
@@ -471,12 +715,15 @@ button:hover {
         transition: .3s;
         position: relative;
     }
+
     #nav.active #hamburger {
         border-top-color: transparent ;
     }
+
     #nav.active #hamburger::before {
         transform: rotate(135deg);
     }
+
     #nav.active #hamburger::after {
         transform: rotate(-135deg);
         top: -7px;
