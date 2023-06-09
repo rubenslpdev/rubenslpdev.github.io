@@ -276,6 +276,7 @@ header {
 #home-about {
     margin: 0;
     width: 100vw; 
+    height: auto;
     background-color: #E4DFD5;
     display: flex;
     justify-content: center;
@@ -313,6 +314,7 @@ header {
   vertical-align: middle;
 }
 
+#home-about-container2 p
 #home-portfolio-container1 p, 
 #home-shows-container2 p {
   text-align: justify;
@@ -738,6 +740,7 @@ button:hover {
 #home-about {
   margin: 0;
   width: 100vw; 
+  height: auto;
   background-color: #E4DFD5;
   display: block;
   text-align: center;
@@ -745,16 +748,22 @@ button:hover {
 
   #home-about-container1 {
    max-width: 80%;  
-    height: auto;
+   height: auto;
   }
 
   #home-about-container2 {
-  max-width: 400px;
-  height: auto;
-  margin: auto;
-  padding: 0 0 50px 0;
-  text-align: justify;
-  text-justify: inter-word;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    vertical-align: middle;
+    padding: 4rem 0;
+  }
+
+  #home-about-container2 hr {
+   
+    text-align: center;
+    vertical-align: middle;
+    margin: 2rem auto;
 
   }
 
@@ -781,5 +790,53 @@ button:hover {
     height: auto;
     
   }
+
+  #home-shows {
+    width: 100vw; 
+    height: auto;
+    display: block;
+  }
+
+  #home-shows-container1 {
+    width: 100%;
+  }
+
+  #home-shows-container2 {
+    width: 50%;
+    height: auto;
+    min-width: 350px; 
+    padding: 0 30px;
+    margin: auto;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  #home-contact {
+    width: 100vw; 
+    height: auto;
+    display: block;
+    padding-bottom: 3rem;
+  }
+  
+  #home-contact-container1 {
+    width: 100%;
+  }
+  
+  #home-contact-container2 {
+    width: 100%;
+    height: auto;
+    min-width: 350px; 
+
+    margin: auto;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  form {
+    width: 100vw;
+    max-width: 500px;
+
+  }
+  
 /*===== Fim Main =====*/
 }
