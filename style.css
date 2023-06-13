@@ -298,23 +298,22 @@ header {
 #home-portfolio {
   margin: 0 auto;
   width: 100vw;
-  min-height: 700px;
+  height: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-#home-portfolio-container1, 
-#home-shows-container2 {
+#home-portfolio-container1 {
   width: 50%;
-  min-width: 350px; 
+  height: 100%;
   padding: 0 30px;
   margin: auto;
   text-align: center;
   vertical-align: middle;
 }
 
-#home-about-container2 p
+#home-about-container2 p,
 #home-portfolio-container1 p, 
 #home-shows-container2 p {
   text-align: justify;
@@ -329,11 +328,122 @@ button {
   margin: 50px 0;
 }
 
-#home-portfolio-container2, 
-#home-shows-container1 {
-  width: 50%;
-  height: 100%;  
+#home-portfolio-container2 {
+  height: auto;  
 }
+
+/*===== Slider Portfolio Start =====*/
+
+.slider-port {
+  margin: 0 auto;
+  max-width: 700px;
+  height: auto;
+  overflow: hidden;
+ 
+}
+
+.slides-port {
+  width: 400%;
+  height: auto;
+  display: flex;
+}
+
+.slides-port input {
+  display: none;
+}
+
+.slide-port {
+  width: 25%;
+  position: relative;
+  transition: 2s;
+}
+
+.slide-port img {
+  width: 100%;
+}
+
+
+.manual-navigation {
+  position: absolute;
+  width: 700px;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn {
+  border: 2px solid #fff;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+  margin-right: 20px;
+} 
+
+.manual-btn:hover {
+  background-color: #fff;
+}
+
+
+
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+  margin-left: -25%;
+}
+
+#radio3:checked ~ .first {
+  margin-left: -50%;
+}
+
+#radio4:checked ~ .first {
+  margin-left: -75%;
+}
+
+.navigation-auto div {
+  border: 2px solid #fff;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.navigation-auto {
+  position: absolute;
+  width: 100%;
+  margin-top: 660px;
+  display: none;
+  justify-content: center;
+  border: 2px solid red;
+
+}
+
+.navigation-auto div:not(:last-child) {
+  margin-right: 20px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+  background-color: #fff;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+  background-color: #fff;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+  background-color: #fff;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+  background-color: #fff;
+}
+
+/*===== Slider Portfolio End =====*/
 
 #home-clients-container1 {
   padding: 4rem;
@@ -368,7 +478,7 @@ button {
 .logos:after {
   position: absolute;
   top: 0;
-  width: 250px;
+  width: 150px;
   height: 100%;
   content: "";
   z-index: 2;
@@ -418,12 +528,24 @@ button {
  background-color: #E4DFD5;
 }
 
+#home-shows-container1 {
+  width: 50%;
+  height: 100%;  
+}
 
-#home-portfolio-container2 img, 
 #home-shows-container1 img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+#home-shows-container2 {
+  width: 50%;
+  min-width: 350px; 
+  padding: 0 30px;
+  margin: auto;
+  text-align: center;
+  vertical-align: middle;
 }
 
 #home-contact {
@@ -768,9 +890,8 @@ button:hover {
   }
 
   #home-portfolio {
-    margin: 0;
     width: 100vw;
-    text-align: center;
+    height: auto;
     display: flex;
     flex-direction: column-reverse;
     
@@ -778,6 +899,7 @@ button:hover {
   
   #home-portfolio-container1 {
     width: 50%;
+    height: auto;
     min-width: 350px; 
     padding: 0 30px;
     margin:auto;
@@ -788,7 +910,11 @@ button:hover {
   #home-portfolio-container2 {
     width: 100%;
     height: auto;
-    
+  }
+
+  .manual-navigation {
+    width: 100%;
+    max-width: 700px;
   }
 
   #home-shows {
@@ -826,7 +952,6 @@ button:hover {
     width: 100%;
     height: auto;
     min-width: 350px; 
-
     margin: auto;
     text-align: center;
     vertical-align: middle;
