@@ -1,5 +1,5 @@
 
-// Início menu
+// Menu
 const btnMobile = document.getElementById('btn-mobile');
 
 function toggleMenu(event) {
@@ -17,9 +17,8 @@ function toggleMenu(event) {
 
 btnMobile.addEventListener('click', toggleMenu);
 btnMobile.addEventListener('touchstart', toggleMenu);
-// Fim menu
 
-// Início Slider Portfolio
+// Slider Home Portfolio
 let count = 1;
 document.getElementById("radio1").checked = true;
 
@@ -34,12 +33,15 @@ function nextImage(){
     }
 
     document.getElementById("radio"+count).checked = true;
-
 }
 
-// Fim Slider Portfolio
-
-// Início Slider Clientes
+// Slider Home Clientes
 var copy = document.querySelector(".logos-slide").cloneNode(true);
       document.querySelector(".logos").appendChild(copy);
-// Fim Slider Clientes
+
+// Portfolio onclick overlay
+function toggleOverlay(element) {
+    element.classList.toggle("show-overlay");
+}  
+
+
