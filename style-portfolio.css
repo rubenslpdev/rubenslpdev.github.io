@@ -30,6 +30,7 @@ header {
     border-image: linear-gradient(45deg, #BEA960, #F1AB5C) 1;
     position: fixed; 
     z-index: 10;
+    transition: top 0.3s;
 }
 
 #top {

@@ -62,7 +62,7 @@
                 <div class="vertical-line"></div>
                 <h1>Portfolio</h1>
                 <p>My university degree in <em>industrial design</em> has taught me how to effectively communicate an idea or concept through forms, organic shapes, proportions, color theory, and other design elements.</p>
-                <p>For the past two decades, I have been working with many prestigious companies, such as <em>Adidas, Nike, Absolut Vodka, Coca-Cola, Microsoft, and Veuve Clicquot</em>, to create products that are functional, aesthetic, and appealing to their target audiences.</span></p>
+                <p>For the past two decades, I have been working with many prestigious companies, such as <em>Adidas, Nike, Absolut Vodka, Coca-Cola, Microsoft, and Veuve Clicquot</em>, to create products that are functional, aesthetic, and appealing to their target audiences.</p>
                 <a href="portfolio.html" target="_self"><button>Go to Portfolio</button></a>
             </div>
             <div id="home-portfolio-container2">
@@ -147,11 +147,11 @@
                 <h1>Get in touch</h1>
                 <a href="mailto:info@rubenslp.com.br">info@rubenslp.com.br</a>
                 <div class="hr-red"></div>
-                <form id="contato" action="#" method="post">
+                <form id="contato" action="#" method="post" >
                     <fieldset form="contato">
-                        <div class="left"><label for="first-name" class="visuallyhidden">Enter Your First Name: </label><input id="first-name" name="first-name" type="text" placeholder="Name" required /></div>
-                        <div class="right"><label for="email" class="visuallyhidden">Enter Your Email: </label><input id="email" name="email" type="email" placeholder="Email" required /></div>
-                        <label for="subject" class="visuallyhidden">Subject: </label><input id="subject" name="subject" type="text" placeholder="Subject" required />
+                        <div class="left"><label for="first-name" class="visuallyhidden">Enter Your First Name: </label><input id="first-name" name="first-name" type="text" placeholder="Name" autocomplete="on" required /></div>
+                        <div class="right"><label for="email" class="visuallyhidden">Enter Your Email: </label><input id="email" name="email" type="email" placeholder="Email" autocomplete="on" required /></div>
+                        <label for="subject" class="visuallyhidden">Subject: </label><input id="subject" name="subject" type="text" placeholder="Subject" autocomplete="on" required />
                         <label for="message" class="visuallyhidden">Type your message: </label><textarea id="message" name="message" rows="8" cols="30" placeholder="Type your message here..." required></textarea>
                      <input class="submit" type="submit" value="Submit" form="contato" />
                     </fieldset> 
@@ -177,6 +177,7 @@
         <p class="privacy-footer"><a href="privacy.html" target="_self">Privacy policy</a>  | <a href="terms.html" target="_self">Terms</a></p>
         </div>
     </footer>
+    <script src="home.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

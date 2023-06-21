@@ -9,8 +9,10 @@ function toggleMenu(event) {
     const active = nav.classList.contains('active');
     event.currentTarget.setAttribute('aria-expanded', 'active');
     if (active) {
+        document.documentElement.style.overflow = 'hidden';
         event.currentTarget.setAttribute('aria-label', 'Fechar Menu');
     } else {
+        document.documentElement.style.overflow = 'unset';
         event.currentTarget.setAttribute('aria-label', 'Abrir Menu');
     }
 }
@@ -18,30 +20,16 @@ function toggleMenu(event) {
 btnMobile.addEventListener('click', toggleMenu);
 btnMobile.addEventListener('touchstart', toggleMenu);
 
-// Slider Home Portfolio
-let count = 1;
-document.getElementById("radio1").checked = true;
-
-setInterval( function(){
-    nextImage();
-}, 5000)
-
-function nextImage(){
-    count++;
-    if(count>4){
-        count=1;
-    }
-
-    document.getElementById("radio"+count).checked = true;
+// Menu scroll
+var lastScrollTop;
+navbar = document.getElementById('header');
+window.addEventListener('scroll',function(){
+var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+if(scrollTop > lastScrollTop){
+navbar.style.top='-70px';
 }
-
-// Slider Home Clientes
-var copy = document.querySelector(".logos-slide").cloneNode(true);
-      document.querySelector(".logos").appendChild(copy);
-
-// Portfolio onclick overlay
-function toggleOverlay(element) {
-    element.classList.toggle("show-overlay");
-}  
-
-
+else{
+navbar.style.top='0';
+}
+lastScrollTop = scrollTop;
+});

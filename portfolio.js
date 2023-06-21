@@ -1,4 +1,4 @@
-// Slideshow Portfolio
+// Slideshow
 let slideIndex = [1,1,1,1,1];
 
 let slideId = ["mySlides1", "mySlides2", "mySlides3", "mySlides4", "mySlides5"]
@@ -22,3 +22,8 @@ function showSlides(n, no) {
   }
   x[slideIndex[no]-1].style.display = "block";
 }
+
+// Onclick overlay
+function toggleOverlay(element) {
+  element.classList.toggle("show-overlay");
+} 
