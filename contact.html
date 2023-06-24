@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Raleway:wght@100;400;700&family=Inter&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="imgs/geral/favicon.png">
+    <script src="https://kit.fontawesome.com/311c6757ca.js" crossorigin="anonymous"></script>
+    <title>Rubens LP - Illustrator & Graphic Designer</title>
+</head>
+<body>
+<!-- =====Início do header===== -->
+    <header id="header">
+        <div id="top">
+            <a href="index.html"><img  id="logo" src="imgs/logos/logo-golden.png" alt="Home"></a>  
+            <nav id="nav">
+                <button id="btn-mobile" aria-label="Abrir Menu" aria-haspopup="true" aria-expanded="false" aria-controls="menu">Menu <span id="hamburger"></span></button>                
+                <ul id="menu" role="menu">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="portfolio.html">PORTFOLIO</a></li>
+                    <li><a href="shows.html">SHOWS</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </nav>  
+            <div class="social">
+                <a href="http://www.instagram.com/rubenslp" target="_blank"><img src="imgs/logos/24x24-instagram.svg" alt="Instagram"></a>
+                <a href="http://www.twitter.com/rubenslp" target="_blank"><img src="imgs/logos/24x24-twitter.svg" alt="Twitter"></a>
+                <a href="http://www.linkedin.com/in/rubenslp" target="_blank"><img src="imgs/logos/24x24-linkedin.svg" alt="LinkedIn"></a>
+                <a href="http://rubenslp.deviantart.com" target="_blank"><img src="imgs/logos/24x24-deviantart.svg" alt="DeviantArt"></a>
+            </div>
+        </div>
+    </header>
+<!-- =====Fim do header e início do Main===== -->
+    <main id="contact-bg">
+        <div class="contact-box">
+            <div class="contact-container1">
+                <div class="contact-infos">
+                    <div class="vertical-line-red"></div>
+                    <div class="contact-email"><i class="fa-regular fa-envelope"></i><a href="mailto:info@rubenslp.com.br">info@rubenslp.com.br</a></div>
+                    <div class="contact-phone"><i class="fa-brands fa-whatsapp"></i><a href="https://web.whatsapp.com/send?phone=5511983871044">+55 11 9 8387-1044</a></div>
+                    <div class="hr-red"></div>
+                </div>
+            </div>
+            <div class="contact-container2">
+                <div class="form-container">
+                    <h2>Get in touch</h2>
+                    <form id="contato" action="https://forms.un-static.com/forms/0f154d549e442d8f435d86777c915ac14a064dc7" method="POST" >
+                        <fieldset form="contato">
+                            <div class="left"><label for="first-name" class="visuallyhidden">Enter Your First Name: </label><input id="first-name" name="first-name" type="text" placeholder="Name" autocomplete="on" required /></div>
+                            <div class="right"><label for="email" class="visuallyhidden">Enter Your Email: </label><input id="email" name="email" type="email" placeholder="Email" autocomplete="on" required /></div>
+                            <label for="subject" class="visuallyhidden">Subject: </label><input id="subject" name="subject" type="text" placeholder="Subject" autocomplete="on" required />
+                            <label for="message" class="visuallyhidden">Type your message: </label><textarea id="message" name="message" rows="8" cols="30" placeholder="Type your message here..." required></textarea>
+                            <input class="submit" type="submit" value="Submit" form="contato" />
+                            <input type="hidden" name="_next" value="contact.html" />
+                        </fieldset> 
+                    </form>
+                    <p id="thank-you-message">Thanks for submitting!</p>
+                </div> 
+            </div>
+        </div>     
+    </main>
+<!-- =====Fim do Main===== -->
+    <footer>
+        <div id="footer-container">
+        <img class="footer-logo" src="imgs/logos/lp-profile-golden.png" alt="Rubens LP logo">
+        <div class="social-footer">
+            <a href="http://www.instagram.com/rubenslp" target="_blank"><img src="imgs/logos/24x24-instagram.svg" alt="Instagram"></a>
+            <a href="http://www.twitter.com/rubenslp" target="_blank"><img src="imgs/logos/24x24-twitter.svg" alt="Twitter"></a>
+            <a href="http://www.linkedin.com/in/rubenslp" target="_blank"><img src="imgs/logos/24x24-linkedin.svg" alt="LinkedIn"></a>
+            <a href="http://rubenslp.deviantart.com" target="_blank"><img src="imgs/logos/24x24-deviantart.svg" alt="DeviantArt"></a>
+        </div>
+        <div class="contact-footer">
+            <a href="mailto:info@rubenslp.com.br">info@rubenslp.com.br</a>
+            <p>© 2005-2023 Rubens LP . All rights reserved</p>
+        </div>
+        <p class="privacy-footer"><a href="privacy.html" target="_self">Privacy policy</a>  | <a href="terms.html" target="_self">Terms</a></p>
+        </div>
+    </footer>
+    <script src="contact.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

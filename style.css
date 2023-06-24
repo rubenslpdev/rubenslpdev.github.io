@@ -67,11 +67,11 @@ header {
 
 .social {
     display: flex;
+    gap: 10px;
 }
 
 .social img {
     width: 22px;
-    margin-left: 10px;
 }
 
 #btn-mobile {
@@ -569,49 +569,6 @@ button {
   text-align: center;
 }
 
-form {
-  width: 60vw;
-  max-width: 500px;
-  min-width: 250px;
-  margin: 0 auto;
-  padding-bottom: 2em;
-}
-
-fieldset {
-  border: none;
-}
-
-input,
-textarea,
-select {
-  margin: 0 0 10px 0;
-  width: 100%;
-  min-height: 2em;
-  padding: 0 10px;
-}
-
-input,
-textarea {
-  background-color: #fff;
-  border: 1px solid #fff;
-  color: #252420;
-}
-
-.submit {
-  transition: all 0.2s ease, visibility 0s;
-  border-radius: 0;
-  background-color: #252420;
-  border: 0;
-  color: #bbaa5c;
-  min-height: 3em;
-  cursor: pointer;
-}
-
-.submit:hover {
-  color: #fff;
-  background: rgba(37,35,32,0.9);
-}
-
 #home-contact-container1 img {
   width: 100%;
   height: 100%;
@@ -683,11 +640,9 @@ footer {
  align-items: center;
  justify-content: center;
  margin: auto;
+ gap: 10px;
 }
 
-.social-footer img {
-  margin-left: 10px;
-}
 /*=============== About ===============*/
 
 #about-body {
@@ -733,8 +688,230 @@ footer {
   margin-top: 2rem;
   font-size: 1.5rem;
 }
+/*=============== Shows page ===============*/
 
-/*=============== Geral ===============*/
+#current-show {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 8rem;
+  background-color: #141628;
+}
+
+.shows-container1 {
+  width: 50%;
+  color: #fff;
+  display: flex;
+  justify-content:right;
+}
+
+.shows-container2 {
+  width: 50%;
+
+}
+
+.shows-container2 img{
+  width: 90%;
+  height: auto;
+}
+
+.shows-container1-info {
+  width: 240px;
+}
+
+.shows-container1-info hr {
+  width: 50px;
+  border-top: 2px solid #BEA960;
+  margin: 0;
+}
+
+.shows-container1-info p {
+  padding: .5rem 0;
+  font-size: .9rem;
+}
+
+.shows-container1-info h2 {
+  font-size: 3rem;
+}
+
+.shows-container-img {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.shows-container1-info img {
+  width: 3rem;
+  margin: auto;
+}
+
+#past-shows {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #FBF6EB;
+}
+
+.past-shows-container1 {
+  width: 30%;
+  text-align: center; 
+}
+
+.past-shows-container2 {
+  width: 50%;
+  height: 100%;
+  margin: 5rem 2rem 0;
+  padding-bottom: 3rem;
+}
+
+.past-shows-container2 li{
+  padding-bottom: 1rem;
+}
+
+.past-shows-container1 h2 {
+  margin-bottom: 3rem;
+  font-size: 2rem;
+}
+
+
+/*=============== Contact page ===============*/
+
+#contact-bg {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(imgs/portfolio/parallax.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #252420;
+}
+
+.contact-box {
+  width: 80%;
+  max-width: 1250px;
+  height: 80%;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.contact-container1 {
+  width: 30%;
+  height: 100%;
+  background-image: url(imgs/geral/contato.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  border-radius: 4px 0 0 4px;
+}
+
+.contact-infos {
+  width: 100%;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-size: .9rem;
+}
+
+.contact-email, .contact-phone {
+  margin: .7rem;  
+}
+
+.contact-email a, .contact-phone a {
+  color: #fff;
+}
+
+.contact-email a:hover, .contact-phone a:hover {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.fa-envelope, .fa-brands {
+  padding: 0 .6rem;
+}
+
+.contact-container2 {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  text-align: center; 
+}
+
+.form-container h2 {
+  margin-bottom: 2rem;
+}
+
+form {
+  width: 60vw;
+  max-width: 500px;
+  min-width: 250px;
+  margin: 0 auto;
+  padding-bottom: 2em;
+}
+
+fieldset {
+  border: none;
+}
+
+input,
+textarea,
+select {
+  margin: 0 0 10px 0;
+  width: 100%;
+  min-height: 2em;
+  padding: 0 10px;
+}
+
+input {
+  background-color: #fff;
+  border: 0;
+  border-bottom: 2px solid #BEA960;
+  color: #252420; 
+}
+
+textarea {
+  background-color: #fff;
+  border: 2px solid #BEA960;
+  color: #252420;
+}
+
+.submit {
+  transition: all 0.2s ease, visibility 0s;
+  border-radius: 0;
+  background-color: #252420;
+  border: 0;
+  color: #bbaa5c;
+  min-height: 3em;
+  cursor: pointer;
+}
+
+.submit:hover {
+  color: #fff;
+  background: #BEA960;
+}
+
+#thank-you-message {
+  display: none;
+}
+
+#thank-you-message.show {
+  display: block;
+  color: #252420;
+}
+
+/*=============== general ===============*/
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -788,7 +965,7 @@ hr {
   width: 20px;
   border: 0;
   border-top: 3px solid #F47B62;
-  margin: 2rem auto;
+  margin: 1rem auto;
   text-align: center;
 }
 
@@ -991,32 +1168,6 @@ button:hover {
     vertical-align: middle;
   }
 
-  #home-contact {
-    width: 100vw; 
-    height: auto;
-    display: block;
-    padding: 4rem 0;
-  }
-  
-  #home-contact-container1 {
-    width: 100%;
-    height: 100%;
-  }
-  
-  #home-contact-container2 {
-    width: 100%;
-    height: auto;
-    min-width: 350px; 
-    margin: auto;
-    text-align: center;
-    vertical-align: middle;
-  }
-
-  form {
-    width: 100vw;
-    max-width: 500px;
-
-  }
   
 /*========== ABOUT.html ==========*/
   #about-body {
@@ -1044,4 +1195,63 @@ button:hover {
     text-justify: inter-word;
   }
 
+/*========== SHOWS.html ==========*/
+
+#current-show {
+  width: 100%;
+  display: block;
+  height: 100%;
+  padding-bottom: 4rem;
+}
+
+
+.shows-container1 {
+  width: 100%;
+  color: #fff;
+  display: flex;
+  padding-bottom: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.shows-container2 {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  margin: 0;
+}
+
+.shows-container2 img{
+  width: 90%;
+  height: auto;
+}
+
+#past-shows {
+  display: block;
+}
+
+.past-shows-container1 {
+  padding: 0 30px;
+  margin: auto;
+  text-align: center;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.past-shows-container2 {
+  padding: 0 3rem 3rem;
+  margin: auto;
+  width: 100%; 
+  vertical-align: middle;
+  height: 100%;
+}
+
+/*========== CONTACT.html ==========*/
+  
+  .contact-container1 {
+    width: 100%;
+  }
+  .contact-container2 {
+    display: none;
+  }
 }
