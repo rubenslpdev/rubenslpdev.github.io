@@ -1102,6 +1102,10 @@ button:hover {
 
 /*===== Início Main =====*/
 
+#home-intro {
+  background-attachment: scroll;
+} 
+
 #home-about {
   margin: 0;
   width: 100vw; 
