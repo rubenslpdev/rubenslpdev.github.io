@@ -911,6 +911,19 @@ textarea {
   color: #252420;
 }
 
+/*=============== Terms & Policy ===============*/
+
+#parallax-terms {
+  background-image: url(imgs/portfolio/parallax.svg);
+  width: 100vw;
+  min-height: 350px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #252420;
+}
+
 /*=============== general ===============*/
 .visuallyhidden {
   border: 0;
@@ -1254,4 +1267,11 @@ button:hover {
   .contact-container2 {
     display: none;
   }
+
+/*========== Press & Privacy ==========*/
+
+  #parallax-terms {
+    min-height: 300px;
+  }
+
 }

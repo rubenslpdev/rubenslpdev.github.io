@@ -175,26 +175,30 @@ header {
   cursor: pointer;
   position: absolute;
   top: 50%;
-  width: auto;
-  padding: 10px;
-  margin-top: -22px;
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.3);
-  font-weight: bold;
+  width: 30px;
+  height: 30px;
+  padding: 2px 10px;
+  color: #252420;
+  background-color: #fff;
   font-size: 18px;
   transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
+  border-radius: 50%;
   user-select: none;
 }
 
 .next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+  right: 1rem;
+  border-radius: 50%;
+}
+
+.prev {
+  left: 1rem;
+  border-radius: 50%;
 }
 
 .prev:hover, .next:hover {
   background-color: #252420;
-  color: #ffff;
+  color: #fff;
 }
 
 .fade {
@@ -431,8 +435,5 @@ button:hover {
         top: -7px;
     }
 
-/*========== Main ==========*/
 
-
-/*========== Fim Main ==========*/
 }
