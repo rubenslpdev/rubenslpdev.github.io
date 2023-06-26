@@ -87,16 +87,6 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
 }
-    
-#home-intro::before {
-    content: "";
-    background: rgba(0, 0, 0, 0.3); /* Black overlay with opacity */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-}
 
 /*===== Home mouse wheel =====*/
 
