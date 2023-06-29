@@ -156,10 +156,18 @@ header {
   text-align: center;
 }
 
-/*========== Slideshows ==========*/
-.mySlides1, .mySlides2, .mySlides3, .mySlides4, .mySlides5, .mySlides6 {
-  display: none;
+/*========== Swiper ==========*/
+.swiper {
+  width: 100%;
 }
+
+.sample-slider [class^="swiper-button-"]::after{
+  font-size: 20px;
+  color: #000;
+}
+
+/*========== Slideshows ==========*/
+
 
 .slideshow img {
   vertical-align: middle;
@@ -169,46 +177,6 @@ header {
   width: 100%;
   position: relative;
   margin: auto;
-}
-
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: 30px;
-  height: 30px;
-  padding: 2px 10px;
-  color: #252420;
-  background-color: #fff;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 50%;
-  user-select: none;
-}
-
-.next {
-  right: 1rem;
-  border-radius: 50%;
-}
-
-.prev {
-  left: 1rem;
-  border-radius: 50%;
-}
-
-.prev:hover, .next:hover {
-  background-color: #252420;
-  color: #fff;
-}
-
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
 }
 
 .info-box {

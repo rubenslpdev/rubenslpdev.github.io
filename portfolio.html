@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Raleway:wght@100;400;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="imgs/geral/favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <title>Rubens LP - Illustrator & Graphic Designer</title>
 </head>
 <body>
@@ -40,32 +41,38 @@
         <div class="row">
             <div class="column"> 
 
-              <div class="container-slideshow">
-                <div class="slideshow">
-                  <img class="mySlides1 fade" src="imgs/portfolio/absolut1.webp">
-                  <img class="mySlides1 fade" src="imgs/portfolio/absolut2.webp">
-                  <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
-                  <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+              <div class="swiper sample-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="imgs/portfolio/absolut1.webp"></div>
+                    <div class="swiper-slide"><img src="imgs/portfolio/absolut2.webp"></div>
                 </div>
-                <div class="info-box">
+                  <div class="swiper-pagination"></div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+              </div>
+
+              <div class="info-box">
                   <img src="imgs/logos/absolut-w.svg" alt="Absolut logo">
                   <hr>
                   <p>In 2007, ABSOLUT VODKA invited 12 artists to design bottles that capture their vision of Brazil.</p>
                   <p>My bottle reflects the influence of northeastern Brazilian folk art and modernist painters such as Tarsila do Amaral and Di Cavalcanti.</p>
                   <hr>
-                </div>
               </div>
-  
-              <div class="container-slideshow">
-                <div class="slideshow">
-                  <img class="mySlides2 fade" src="imgs/portfolio/adidas0.webp">
-                  <img class="mySlides2 fade" src="imgs/portfolio/adidas1.webp">
-                  <img class="mySlides2 fade" src="imgs/portfolio/adidas1b.webp">
-                  <img class="mySlides2 fade" src="imgs/portfolio/adidas2.webp">
-                  <img class="mySlides2 fade" src="imgs/portfolio/adidas2b.webp">
-                  <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
-                  <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+              
+
+                <div class="swiper sample-slider">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="imgs/portfolio/adidas0.webp"></div>
+                    <div class="swiper-slide"><img src="imgs/portfolio/adidas1.webp"></div>
+                    <div class="swiper-slide"><img src="imgs/portfolio/adidas1b.webp"></div>
+                    <div class="swiper-slide"><img src="imgs/portfolio/adidas2.webp"></div>
+                    <div class="swiper-slide"><img src="imgs/portfolio/adidas2b.webp"></div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
                 </div>
+
                 <div class="info-box">
                   <img src="imgs/logos/adidas-w.svg" alt="Adidas logo">
                   <hr>
@@ -73,7 +80,7 @@
                   <p>For me, the obvious choice was soccer, the most popular sport in Brazil. I also wanted to celebrate the beauty and diversity of Brazilian women.</p>
                   <hr>
                 </div>
-              </div>
+              
               
               <div class="container-overlay" id="analog"  onclick="toggleOverlay(this)">
                 <img src="imgs/portfolio/analog.jpg" alt="Analog" class="image">
@@ -89,7 +96,7 @@
                 </div>
               </div>
             </div>
-
+          
             <div class="column">
               <div class="container-slideshow">
                 <div class="slideshow">
@@ -104,20 +111,23 @@
                 </div>
               </div>
               
-              <div class="container-slideshow">
-                <div class="slideshow">
-                  <img class="mySlides3 fade" src="imgs/portfolio/cocamtv1.webp">
-                  <img class="mySlides3 fade" src="imgs/portfolio/cocamtv2.webp">
-                  <a class="prev" onclick="plusSlides(-1, 2)">&#10094;</a>
-                  <a class="next" onclick="plusSlides(1, 2)">&#10095;</a>
+              <div class="swiper sample-slider">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="imgs/portfolio/cocamtv1.webp"></div>
+                  <div class="swiper-slide"><img src="imgs/portfolio/cocamtv2.webp"></div>
                 </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+
                 <div class="info-box">
                   <img src="imgs/logos/cocacola-mtv-w.svg" alt="Coca-Cola + MTV logo">
                   <hr>
                   <p>Artwork commissioned by Coca-Cola to illustrate a mail promotion for the brazilian MTV magazine.</p>
                   <hr>
                 </div>
-              </div>
+              
 
               <div class="container-overlay" id="gqbrasil"  onclick="toggleOverlay(this)">
                 <img src="imgs/portfolio/gqbrasil.jpg" alt="GQ Brasil" class="image">
@@ -137,16 +147,19 @@
 
             <div class="column">
 
-              <div class="container-slideshow">
-                <div class="slideshow">
-                  <img class="mySlides4 fade" src="imgs/portfolio/philipmorris1.webp">
-                  <img class="mySlides4 fade" src="imgs/portfolio/philipmorris2.webp">
-                  <img class="mySlides4 fade" src="imgs/portfolio/philipmorris3.webp">
-                  <img class="mySlides4 fade" src="imgs/portfolio/philipmorris4.webp">
-                  <img class="mySlides4 fade" src="imgs/portfolio/philipmorris5.webp">
-                  <a class="prev" onclick="plusSlides(-1, 3)">&#10094;</a>
-                  <a class="next" onclick="plusSlides(1, 3)">&#10095;</a>
+              <div class="swiper sample-slider">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="imgs/portfolio/philipmorris1.webp"></div>
+                  <div class="swiper-slide"><img src="imgs/portfolio/philipmorris2.webp"></div>
+                  <div class="swiper-slide"><img src="imgs/portfolio/philipmorris3.webp"></div>
+                  <div class="swiper-slide"><img src="imgs/portfolio/philipmorris4.webp"></div>
+                  <div class="swiper-slide"><img src="imgs/portfolio/philipmorris5.webp"></div>
                 </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+
                 <div class="info-box">
                   <img src="imgs/logos/philipsmorris-w.svg" alt="Philip Morris logo">
                   <hr>
@@ -154,7 +167,7 @@
                   <p>The cities I illustrated were Rio de Janeiro, Florianópolis, Maresias, Morro de São Paulo and Fernando de Noronha.</p>
                   <hr>
                 </div>
-              </div>
+              
 
                 <div class="container-overlay" id="illustrationnow"  onclick="toggleOverlay(this)">
                     <img src="imgs/portfolio/illustrationnow.jpg" alt="Illustration Now" class="image">
@@ -183,20 +196,23 @@
               
               <div class="column">
                 
-                <div class="container-slideshow">
-                  <div class="slideshow">
-                    <img class="mySlides5 fade" src="imgs/portfolio/microsoftzune1.webp">
-                    <img class="mySlides5 fade" src="imgs/portfolio/microsoftzune2.webp">
-                    <a class="prev" onclick="plusSlides(-1, 4)">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1, 4)">&#10095;</a>
+                <div class="swiper sample-slider">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="imgs/portfolio/microsoftzune1.webp"></div>
+                    <div class="swiper-slide"><img src="imgs/portfolio/microsoftzune2.webp"></div>
                   </div>
+                  <div class="swiper-pagination"></div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+                </div>
+
                   <div class="info-box">
                     <img src="imgs/logos/microsoft-w.svg" alt="Microsoft logo">
                     <hr>
                     <p>Microsoft invited me to create an illustration for the special Valentine’s Day edition of its music player Zune. The edition came with the art printed on the back and the theme with my art.</p>
                     <hr>
                   </div>
-                </div>
+                
                 
                 <div class="container-overlay" id="veuveclicquot"  onclick="toggleOverlay(this)">
                     <img src="imgs/portfolio/veuveclicquot.png" alt="Veuve Clicquot" class="image">
@@ -236,7 +252,9 @@
         <p class="privacy-footer"><a href="privacy.html" target="_self">Privacy policy</a>  | <a href="terms.html" target="_self">Terms</a></p>
         </div>
     </footer>
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="portfolio.js"></script>
+    <script src="script.js"></script>
+    <script src="Swiper.js"></script>
 </body>
 </html>
