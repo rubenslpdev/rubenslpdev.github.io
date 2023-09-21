@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Awesome Password Generator</title>
+    <!-- Style.css -->
+    <link rel="stylesheet" href="./styles.css" />
+    <!-- Font awesome icons -->
+    <script src="https://kit.fontawesome.com/311c6757ca.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <main>
+      <!-- TITLE -->
+      <div class="container">
+        <h2>******</h2>
+        <h1>Don't get h*cked</h1>
+        <h3>Generate a strong password</h3>
+        <!-- DISPLAY box -->
+        <div class="display result copy-text">
+          <div class="result__viewbox" id="result">Password</div>
+          <button id="copy-btn"><i class="fa-solid fa-copy"></i></button>
+        </div>
+
+        <!-- Advance settings BTN -->
+        <div class="show-settings">
+          <button id="show-settings-btn"><i class="fa-solid fa-gear"></i> advanced settings</button>
+        </div>
+        <!-- START Settings -->
+        <div class="settings-container">
+          <div class="length range__slider" data-min="4" data-max="20">
+            <div class="length__title field-title" data-length="0">length:</div>
+            <input id="slider" type="range" min="4" max="20" value="12" />
+          </div>
+
+          <div class="settings">
+            <span class="settings__title field-title">settings</span>
+            <div class="setting">
+              <input type="checkbox" id="uppercase" checked />
+              <label for="uppercase">Include Uppercase</label>
+            </div>
+            <div class="setting">
+              <input type="checkbox" id="lowercase" checked />
+              <label for="lowercase">Include Lowercase</label>
+            </div>
+            <div class="setting">
+              <input type="checkbox" id="number" checked />
+              <label for="number">Include Numbers</label>
+            </div>
+            <div class="setting">
+              <input type="checkbox" id="symbol" />
+              <label for="symbol">Include Symbols</label>
+            </div>
+          </div>
+        </div>
+        <!-- END Settings -->
+        <!-- Generate BTN -->
+        <button id="generate"><i class="fa-solid fa-key"></i> generate</button>
+      </div>
+    </main>
+  </body>
+  <script src="./app.js"></script>
+</html>
