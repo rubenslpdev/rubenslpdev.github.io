@@ -17,7 +17,6 @@ Variables
   --purple-light: #6279ee;
   --pink: #f5a1c9;
   --white: #fff;
-  --grey: hsl(0, 0, 40, 100%);
   --gradient: linear-gradient(to right, #f5a1c9, #8472f3);
   --ff-primary: "Roboto", sans-serif;
   --ff-title: "DM Serif Display", serif;
@@ -100,7 +99,7 @@ main {
 .container {
   width: 90%;
   max-width: 700px;
-  margin: 20px 0;
+  margin: 40px 20px;
 }
 
 .display {
@@ -125,6 +124,10 @@ main {
   background: none;
   color: var(--purple);
   font-size: 1.5rem;
+}
+
+#result {
+  padding: 0 10px;
 }
 
 /*  Button Settings */
@@ -188,6 +191,7 @@ Settings
   color: var(--white);
   font-size: 0.9rem;
   font-weight: bold;
+  padding-left: 5px;
 }
 .range__slider::before {
   content: attr(data-min);
@@ -252,7 +256,7 @@ Settings
   border-radius: 8px;
   display: flex;
   align-items: center;
-  padding: 10px 25px;
+  padding: 10px 15px;
   color: var(--white);
   margin-bottom: 8px;
 }
@@ -333,13 +337,24 @@ Settings
   border-radius: var(--radius2);
   cursor: pointer;
   box-shadow: var(--dark-shadow);
+  position: relative;
+  transition: var(--transition);
 }
 
 #generate i {
   margin-right: 16px;
 }
 
-/* testetess */
+/* #generate:hover {
+  text-shadow: 2px 2px 4px #3f50a9;
+} */
+
+#generate:active {
+  top: 2px;
+  box-shadow: none;
+}
+
+/* Copied alert */
 
 .copy-text {
   position: relative;

@@ -1,11 +1,13 @@
+// ======================
 // Open Advanced Settings
+// ======================
 
 function openSettings() {
   const showSettings = document.getElementById("show-settings-btn");
 
   showSettings.addEventListener("click", function (e) {
-    const settings = e.currentTarget.parentElement.parentElement;
-    settings.classList.toggle("show-text");
+    const container = document.querySelector(".container");
+    container.classList.toggle("show-text");
   });
 }
 openSettings();
@@ -13,6 +15,7 @@ openSettings();
 // ===============
 // Settings setup
 // ===============
+
 console.clear();
 
 const sliderProps = {
@@ -156,9 +159,3 @@ function disableOnlyCheckbox() {
     disableOnlyCheckbox();
   });
 });
-
-// ================
-// Copy button
-// ================
-
-// Message of Copied after clicking on Copy btn
