@@ -2,15 +2,9 @@
 // Open Advanced Settings
 // ======================
 
-function openSettings() {
-  const showSettings = document.getElementById("show-settings-btn");
-
-  showSettings.addEventListener("click", function (e) {
-    const container = document.querySelector(".container");
-    container.classList.toggle("show-text");
-  });
+function toggle() {
+  document.getElementById("collapse").classList.toggle("show");
 }
-openSettings();
 
 // ===============
 // Settings setup

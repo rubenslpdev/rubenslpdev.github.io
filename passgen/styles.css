@@ -151,6 +151,22 @@ main {
   margin-right: 10px;
 }
 
+/* Hide Settings */
+
+#collapse {
+  transition: all 0.5s ease-in;
+  overflow: hidden;
+  height: 0;
+  opacity: 0;
+}
+
+#collapse.show {
+  width: 100%;
+  height: 380px;
+  opacity: 1;
+  overflow: hidden;
+}
+
 /* 
 ===========
 Settings
@@ -311,18 +327,8 @@ Settings
   background: var(--purple);
 }
 
-/* Hide Settings */
-
-.settings-container {
-  display: none;
-  margin-bottom: 1rem;
-}
-
-.show-text .settings-container {
-  display: block;
-}
-
 /* Generate button */
+
 #generate {
   border: 0;
   outline: 0;

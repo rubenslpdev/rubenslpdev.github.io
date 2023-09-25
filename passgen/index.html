@@ -25,10 +25,10 @@
 
         <!-- Advance settings BTN -->
         <div class="show-settings">
-          <button id="show-settings-btn"><i class="fa-solid fa-gear"></i> advanced settings</button>
+          <button id="show-settings-btn" onclick="toggle()"><i class="fa-solid fa-gear"></i> advanced settings</button>
         </div>
         <!-- START Settings -->
-        <div class="settings-container">
+        <div id="collapse" class="settings-container">
           <div class="length range__slider" data-min="4" data-max="20">
             <div class="length__title field-title" data-length="0">length:</div>
             <input id="slider" type="range" min="4" max="20" value="12" />
