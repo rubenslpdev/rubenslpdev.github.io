@@ -319,13 +319,14 @@ Settings
 .settings .setting input:disabled + label:before,
 .settings .setting input:disabled + label:after {
   cursor: not-allowed;
+  background: var(--pink);
 }
-.settings .setting input:disabled + label:before {
-  background: var(--purple);
+/* .settings .setting input:disabled + label:before {
+  background: var(--pink);
 }
 .settings .setting input:disabled + label:after {
-  background: var(--purple);
-}
+  background: var(--pink);
+} */
 
 /* Generate button */
 
@@ -350,10 +351,6 @@ Settings
 #generate i {
   margin-right: 16px;
 }
-
-/* #generate:hover {
-  text-shadow: 2px 2px 4px #3f50a9;
-} */
 
 #generate:active {
   top: 2px;
