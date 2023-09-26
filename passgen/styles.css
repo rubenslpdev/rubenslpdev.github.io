@@ -258,9 +258,13 @@ Settings
 #slider::-moz-range-thumb:hover {
   background: #d4d4d4;
 }
+
+/* Checkboxes */
+
 .settings {
   position: relative;
   height: auto;
+  widows: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -272,8 +276,8 @@ Settings
   border-radius: 8px;
   display: flex;
   align-items: center;
-  padding: 10px 15px;
-  color: var(--white);
+  padding: 10px 25px;
+  color: #fff;
   margin-bottom: 8px;
 }
 .settings .setting input {
@@ -304,7 +308,7 @@ Settings
   width: 24px;
   border-radius: 60px;
   right: 32px;
-  background: var(--white);
+  background: #fff;
 }
 .settings .setting input:checked + label:before {
   background: var(--pink);
@@ -314,19 +318,18 @@ Settings
   right: 14px;
 }
 .settings .setting input:focus + label:before {
-  box-shadow: 0 0 0 2px var(--purple-light);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.75);
 }
 .settings .setting input:disabled + label:before,
 .settings .setting input:disabled + label:after {
   cursor: not-allowed;
-  background: var(--pink);
 }
-/* .settings .setting input:disabled + label:before {
-  background: var(--pink);
+.settings .setting input:disabled + label:before {
+  background: #ad738f;
 }
 .settings .setting input:disabled + label:after {
-  background: var(--pink);
-} */
+  background: #b4b4b4;
+}
 
 /* Generate button */
 
