@@ -57,7 +57,7 @@ Entre em contato comigo ou acompanhe meu trabalho nas redes sociais:
 
 - **E-mail**: info@rubenslp.com.br
 - **LinkedIn**: [Meu Perfil](https://www.linkedin.com/in/rubenslp)  
-- **Instagram**: [@rubenslp]([#](https://www.instagram.com/rubenslp/))  
+- **Instagram**: [@rubenslp](https://www.instagram.com/rubenslp)  
 - **Twitter**: [@rubenslp](https://www.twitter.com/rubenslp)
 
 Obrigado por visitar meu site!
