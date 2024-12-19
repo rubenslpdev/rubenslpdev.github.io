@@ -408,6 +408,10 @@ WORKS
   margin-left: 0.5em;
 }
 
+.img-link {
+  cursor: pointer;
+}
+
 /* Títulos que não tiverem link */
 .works-btn-nolink {
   position: relative;
