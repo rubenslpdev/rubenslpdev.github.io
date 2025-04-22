@@ -99,3 +99,54 @@ document.addEventListener('DOMContentLoaded', () => {
 /////////////////////////////////////////
 const date = document.getElementById('date');
 date.innerHTML = new Date().getFullYear();
+
+/////////////////////////////////////////
+// Gallery cards carousel, zoom and slider
+/////////////////////////////////////////
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Initialize all sliders
+  document.querySelectorAll('.image-slider').forEach((slider) => {
+    let currentSlide = 0;
+    const slides = slider.querySelector('.slider-images');
+    const totalSlides = slides.children.length;
+
+    // Previous button click
+    slider.querySelector('.prev').addEventListener('click', () => {
+      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+      updateSlider();
+    });
+
+    // Next button click
+    slider.querySelector('.next').addEventListener('click', () => {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      updateSlider();
+    });
+
+    // Zoom button click
+    slider.querySelector('.zoom-btn').addEventListener('click', () => {
+      const modal = document.getElementById('imageModal');
+      const modalImg = modal.querySelector('.modal-image');
+      const currentImage = slides.children[currentSlide].src;
+
+      modalImg.src = currentImage;
+      modal.classList.add('active');
+    });
+
+    function updateSlider() {
+      slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+  });
+
+  // Modal close button
+  document.querySelector('.modal-close').addEventListener('click', () => {
+    document.getElementById('imageModal').classList.remove('active');
+  });
+
+  // Close modal when clicking outside the image
+  document.getElementById('imageModal').addEventListener('click', (e) => {
+    if (e.target.classList.contains('modal')) {
+      e.target.classList.remove('active');
+    }
+  });
+});
