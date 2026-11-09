@@ -95,6 +95,41 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /////////////////////////////////////////
+// Ver mais trabalhos recentes
+/////////////////////////////////////////
+
+document.addEventListener('DOMContentLoaded', () => {
+  const loadMoreBtn = document.querySelector('.works-more-btn');
+  if (!loadMoreBtn) return;
+
+  const container = loadMoreBtn.closest('.section-container');
+  const allCards = [...container.querySelectorAll('.cards-container .card')];
+  const getHiddenCards = () => allCards.filter((card) => card.classList.contains('card--hidden'));
+
+  // Garante que apenas os 4 primeiros cards apareçam inicialmente,
+  // mesmo que novos cards sejam adicionados sem a classe card--hidden
+  allCards.slice(4).forEach((card) => card.classList.add('card--hidden'));
+
+  const updateButtonVisibility = () => {
+    loadMoreBtn.closest('.works-more').style.display = getHiddenCards().length ? 'flex' : 'none';
+  };
+
+  updateButtonVisibility();
+
+  loadMoreBtn.addEventListener('click', () => {
+    // Revela os próximos 4 cards, mantendo o botão enquanto houver mais
+    getHiddenCards()
+      .slice(0, 4)
+      .forEach((card) => {
+        card.classList.remove('card--hidden');
+        card.classList.add('card--revealed');
+      });
+
+    updateButtonVisibility();
+  });
+});
+
+/////////////////////////////////////////
 // Dynamic copyright date
 /////////////////////////////////////////
 const date = document.getElementById('date');
