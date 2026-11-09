@@ -150,3 +150,43 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+/////////////////////////////////////////
+// Botão flutuante de contato
+/////////////////////////////////////////
+
+document.addEventListener('DOMContentLoaded', () => {
+  const floatingContact = document.getElementById('floatingContact');
+  const contactSection = document.querySelector('.panel[data-color="green"]');
+  const panels = document.querySelectorAll('.panel');
+
+  if (!floatingContact || !contactSection) return;
+
+  // Mostra o botão apenas quando a seção em foco não for a de contato
+  const updateFloatingContact = () => {
+    const scroll = window.scrollY + window.innerHeight / 2;
+    let activePanel = null;
+
+    panels.forEach((panel) => {
+      const panelTop = panel.offsetTop;
+      const panelBottom = panelTop + panel.offsetHeight;
+
+      if (panelTop <= scroll && panelBottom > scroll) {
+        activePanel = panel;
+      }
+    });
+
+    floatingContact.classList.toggle('is-hidden', activePanel === contactSection);
+  };
+
+  window.addEventListener('scroll', updateFloatingContact);
+  updateFloatingContact();
+
+  // Rola suavemente até o contato
+  floatingContact.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+});
