@@ -1,0 +1,18 @@
+# Dependências de build / sistema
+.DS_Store
+Thumbs.db
+*.log
+
+# Ambientes / Editores
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporários
+tmp/
+dist/
+build/
+
+# AI
+AGENTS.md
