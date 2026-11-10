@@ -106,8 +106,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const allCards = [...container.querySelectorAll('.cards-container .card')];
   const getHiddenCards = () => allCards.filter((card) => card.classList.contains('card--hidden'));
 
-  // Garante que apenas os 4 primeiros cards apareçam inicialmente,
-  // mesmo que novos cards sejam adicionados sem a classe card--hidden
+  // Normaliza o estado inicial: os 4 primeiros cards sempre visíveis,
+  // independentemente da ordem em que foram escritos no HTML
+  allCards.forEach((card) => card.classList.remove('card--hidden', 'card--revealed'));
   allCards.slice(4).forEach((card) => card.classList.add('card--hidden'));
 
   const updateButtonVisibility = () => {
@@ -140,48 +141,91 @@ date.innerHTML = new Date().getFullYear();
 /////////////////////////////////////////
 
 document.addEventListener('DOMContentLoaded', () => {
+  const modal = document.getElementById('imageModal');
+  const modalImg = modal ? modal.querySelector('.modal-image') : null;
+
+  const openModal = (image) => {
+    if (!modal || !modalImg) return;
+    modalImg.src = image.src;
+    modalImg.alt = image.alt;
+    modal.classList.add('active');
+  };
+
+  const closeModal = () => {
+    if (!modal) return;
+    modal.classList.remove('active');
+    if (modalImg) modalImg.removeAttribute('src');
+  };
+
   // Initialize all sliders
   document.querySelectorAll('.image-slider').forEach((slider) => {
-    let currentSlide = 0;
     const slides = slider.querySelector('.slider-images');
-    const totalSlides = slides.children.length;
+    if (!slides) return;
 
-    // Previous button click
-    slider.querySelector('.prev').addEventListener('click', () => {
-      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-      updateSlider();
-    });
+    const images = [...slides.querySelectorAll('img')];
+    if (!images.length) return;
 
-    // Next button click
-    slider.querySelector('.next').addEventListener('click', () => {
-      currentSlide = (currentSlide + 1) % totalSlides;
-      updateSlider();
-    });
+    const totalSlides = images.length;
+    const prevBtn = slider.querySelector('.prev');
+    const nextBtn = slider.querySelector('.next');
+    let currentSlide = 0;
 
-    // Zoom button click
-    slider.querySelector('.zoom-btn').addEventListener('click', () => {
-      const modal = document.getElementById('imageModal');
-      const modalImg = modal.querySelector('.modal-image');
-      const currentImage = slides.children[currentSlide].src;
-
-      modalImg.src = currentImage;
-      modal.classList.add('active');
-    });
-
-    function updateSlider() {
+    const updateSlider = () => {
       slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+    };
+
+    // Só inicializa as setas quando existem e há mais de uma imagem
+    if (prevBtn && totalSlides > 1) {
+      prevBtn.addEventListener('click', () => {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        updateSlider();
+      });
     }
+
+    if (nextBtn && totalSlides > 1) {
+      nextBtn.addEventListener('click', () => {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateSlider();
+      });
+    }
+
+    // O ícone de zoom é apenas uma referência visual
+    slider.querySelectorAll('.zoom-btn').forEach((btn) => {
+      btn.setAttribute('tabindex', '-1');
+      btn.setAttribute('aria-hidden', 'true');
+    });
+
+    // Clicar na imagem expande a respectiva imagem
+    images.forEach((image) => {
+      image.tabIndex = 0;
+      image.setAttribute('role', 'button');
+
+      image.addEventListener('click', () => openModal(image));
+      image.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          openModal(image);
+        }
+      });
+    });
   });
 
-  // Modal close button
-  document.querySelector('.modal-close').addEventListener('click', () => {
-    document.getElementById('imageModal').classList.remove('active');
-  });
+  if (!modal) return;
 
-  // Close modal when clicking outside the image
-  document.getElementById('imageModal').addEventListener('click', (e) => {
-    if (e.target.classList.contains('modal')) {
-      e.target.classList.remove('active');
+  // O botão de fechar é apenas uma referência visual
+  const modalClose = modal.querySelector('.modal-close');
+  if (modalClose) {
+    modalClose.setAttribute('tabindex', '-1');
+    modalClose.setAttribute('aria-hidden', 'true');
+  }
+
+  // Clicar em qualquer lugar do modal fecha a imagem
+  modal.addEventListener('click', closeModal);
+
+  // Fecha também com a tecla Esc
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && modal.classList.contains('active')) {
+      closeModal();
     }
   });
 });
