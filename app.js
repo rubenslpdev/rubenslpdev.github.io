@@ -269,3 +269,55 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+/////////////////////////////////////////
+// Copiar o e-mail para o clipboard
+/////////////////////////////////////////
+
+document.addEventListener('DOMContentLoaded', () => {
+  const copyBtn = document.querySelector('.contact-copy-btn');
+  if (!copyBtn) return;
+
+  const label = copyBtn.querySelector('.contact-copy-label');
+  const email = copyBtn.dataset.email;
+  const defaultLabel = label.textContent;
+  const copiedLabel = copyBtn.dataset.copiedLabel || defaultLabel;
+  let resetTimer;
+
+  const copyToClipboard = async (text) => {
+    if (navigator.clipboard && window.isSecureContext) {
+      await navigator.clipboard.writeText(text);
+      return;
+    }
+
+    // Fallback para contextos sem a Clipboard API (ex.: file://)
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    textarea.setAttribute('readonly', '');
+    textarea.style.position = 'fixed';
+    textarea.style.opacity = '0';
+    document.body.appendChild(textarea);
+    textarea.select();
+    const copied = document.execCommand('copy');
+    textarea.remove();
+
+    if (!copied) throw new Error('Copy command failed');
+  };
+
+  copyBtn.addEventListener('click', async () => {
+    try {
+      await copyToClipboard(email);
+    } catch (error) {
+      return;
+    }
+
+    copyBtn.classList.add('is-copied');
+    label.textContent = copiedLabel;
+
+    clearTimeout(resetTimer);
+    resetTimer = setTimeout(() => {
+      copyBtn.classList.remove('is-copied');
+      label.textContent = defaultLabel;
+    }, 1600);
+  });
+});
