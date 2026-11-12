@@ -896,6 +896,9 @@ MEDIA QUERY
   }
 
   /* Contact */
+  .contact-btn {
+    font-size: min(7.55vw, 31px);
+  }
   .contact-social .icon {
     max-height: 26px;
   }
